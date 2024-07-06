@@ -11,7 +11,8 @@ import SwiftUI
 struct LeftoverChefAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let imageModel = ImageModel()
+            ContentView(viewModel: ImagePickerViewModel(model: imageModel))
         }
     }
 }
