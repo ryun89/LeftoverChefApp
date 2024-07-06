@@ -1,37 +1,36 @@
 import SwiftUI
 
 struct ImagePickerView: UIViewControllerRepresentable {
-    // UIImagePickerControllerで撮影された画像が表示されているかを管理
-    @Binding var isShowingSheet: Bool
-
-    // 撮影された画像を保持する変数
-    @Binding var capturedImage: UIImage?
+    @ObservedObject var viewModel: ImagePickerViewModel
     
-    // Coordinatorでコントローラのdelegeteを管理
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(viewModel: viewModel)
+    }
+    
+    func makeUIViewController(context: Context) -> UIImagePickerController {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .camera
+        imagePickerController.delegate = context.coordinator
+        return imagePickerController
+    }
+    
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
+        // 処理なし
+    }
+    
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        // ImagePicker型の変数を用意
-        let parent: ImagePickerView
+        var viewModel: ImagePickerViewModel
         
-        // イニシャライザ
-        init(_ parent: ImagePickerView) {
-            self.parent = parent
+        init(viewModel: ImagePickerViewModel) {
+            self.viewModel = viewModel
         }
         
-        // 撮影が終了したら呼び出されるdelegeteメソッド
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            // 撮影した画像をcapturedimageに保存する
-            if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                parent.capturedImage = originalImage
-            }
-            
-            // sheetを閉じる
-            parent.isShowingSheet.toggle()
+            viewModel.imagePickerController(picker, didFinishPickingMediaWithInfo: info)
         }
         
-        //　キャンセルボタンが押された時に呼ばれるdelegeteメソッド
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            // sheetを閉じる
-            parent.isShowingSheet.toggle()
+            viewModel.imagePickerControllerDidCancel(picker)
         }
     }
 }

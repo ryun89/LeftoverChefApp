@@ -12,6 +12,8 @@
 		EE61E3662C38F094009DD3D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE61E3652C38F094009DD3D5 /* Assets.xcassets */; };
 		EE61E3692C38F094009DD3D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE61E3682C38F094009DD3D5 /* Preview Assets.xcassets */; };
 		EE61E3732C38F283009DD3D5 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3722C38F283009DD3D5 /* ImagePickerView.swift */; };
+		EE61E3772C391084009DD3D5 /* ImagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3762C391084009DD3D5 /* ImagePickerViewModel.swift */; };
+		EE61E3792C39109C009DD3D5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3782C39109C009DD3D5 /* ImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		EE61E3652C38F094009DD3D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE61E3682C38F094009DD3D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EE61E3722C38F283009DD3D5 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		EE61E3762C391084009DD3D5 /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
+		EE61E3782C39109C009DD3D5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		EE61E36F2C38F129009DD3D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE61E3782C39109C009DD3D5 /* ImageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 		EE61E3712C38F142009DD3D5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EE61E3762C391084009DD3D5 /* ImagePickerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE61E3642C38F093009DD3D5 /* ContentView.swift in Sources */,
+				EE61E3792C39109C009DD3D5 /* ImageModel.swift in Sources */,
 				EE61E3732C38F283009DD3D5 /* ImagePickerView.swift in Sources */,
+				EE61E3772C391084009DD3D5 /* ImagePickerViewModel.swift in Sources */,
 				EE61E3622C38F093009DD3D5 /* LeftoverChefAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
