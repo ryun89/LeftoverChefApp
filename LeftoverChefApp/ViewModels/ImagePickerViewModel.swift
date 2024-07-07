@@ -14,8 +14,10 @@ class ImagePickerViewModel: NSObject, ObservableObject, UINavigationControllerDe
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             model.capturedImage = originalImage
+            classifyImage(image: originalImage)
+            print("success classifyImage")
         }
-        model.isShowingSheet.toggle()
+        picker.dismiss(animated: true, completion: nil)
     }
     
     // 撮影がキャンセルされた時に実行
@@ -37,7 +39,7 @@ class ImagePickerViewModel: NSObject, ObservableObject, UINavigationControllerDe
             }
             
             // 分類されたラベル名を変数に格納
-            DispatchQueue.main.sync {
+            DispatchQueue.main.async {
                 self?.model.classificationLabel = topResult.identifier
             }
         }

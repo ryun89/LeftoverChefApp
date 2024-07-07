@@ -16,6 +16,7 @@
 		EE61E3792C39109C009DD3D5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3782C39109C009DD3D5 /* ImageModel.swift */; };
 		EE61E37E2C392A2C009DD3D5 /* VegetableImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EE61E37D2C392A2C009DD3D5 /* VegetableImageClassifier.mlmodel */; };
 		EE61E3802C392CF0009DD3D5 /* VegetableImageClassifierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */; };
+		EE61E3822C3A4FC7009DD3D5 /* ClassificationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		EE61E3782C39109C009DD3D5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		EE61E37D2C392A2C009DD3D5 /* VegetableImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VegetableImageClassifier.mlmodel; sourceTree = "<group>"; };
 		EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableImageClassifierModel.swift; sourceTree = "<group>"; };
+		EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				EE61E3722C38F283009DD3D5 /* ImagePickerView.swift */,
+				EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				EE61E3732C38F283009DD3D5 /* ImagePickerView.swift in Sources */,
 				EE61E3772C391084009DD3D5 /* ImagePickerViewModel.swift in Sources */,
 				EE61E3622C38F093009DD3D5 /* LeftoverChefAppApp.swift in Sources */,
+				EE61E3822C3A4FC7009DD3D5 /* ClassificationResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
