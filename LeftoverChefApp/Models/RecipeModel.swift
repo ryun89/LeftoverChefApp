@@ -1,12 +1,17 @@
 import Foundation
 
 // レシピデータ
-struct Recipe: Codable {
+struct Recipe: Codable, Equatable {
     let label: String
     let url: String
     let image: String
     let ingredientLines: [String]
     let totalTime: Int
+    
+    // Equatable準拠のために==演算子をオーバーロード
+    static func == (lhs: Recipe, rhs: Recipe) -> Bool {
+        return lhs.label == rhs.label && lhs.url == rhs.url && lhs.image == rhs.image && lhs.ingredientLines == rhs.ingredientLines && lhs.totalTime == rhs.totalTime
+    }
 }
 
 struct Hit: Codable {

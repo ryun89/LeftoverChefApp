@@ -3,6 +3,12 @@ import SwiftUI
 struct SearchResultView: View {
     @ObservedObject var recipeViewModel: RecipeViewModel
     
+    // 選択されたレシピのリンク
+    @State private var selectedRecipeLink: URL?
+    
+    // SafariViewを表示するかどうかのフラグ
+    @State var isShowSafari = false
+    
     // レシピで使用する食材の表示上限値
     private let DISPLAY_LIMIT = 5
     
@@ -10,36 +16,53 @@ struct SearchResultView: View {
         VStack {
             // 検索結果一覧をリストで表示する
             List(recipeViewModel.recipes, id: \.label) { recipe in
-                HStack {
-                    VStack(alignment: .leading){
-                        Text(recipe.label)
-                            .font(.headline)
-                        Text("調理時間:\(recipe.totalTime)分")
-                            .font(.body)
-                        Text("使用する食材:")
-                            .font(.subheadline)
-                        ForEach(recipe.ingredientLines.prefix(DISPLAY_LIMIT), id: \.self) { ingredient in
-                            Text(ingredient)
-                                .font(.subheadline)
-                        }
-                        if recipe.ingredientLines.count > DISPLAY_LIMIT {
-                            Text("...")
+                Button {
+                    recipeViewModel.recipeLink = URL(string: recipe.url)
+                    isShowSafari.toggle()
+                    
+                } label: {
+                    HStack {
+                        VStack(alignment: .leading){
+                            Text(recipe.label)
+                                .font(.headline)
+                            Text("調理時間:\(recipe.totalTime)分")
                                 .font(.body)
+                            Text("使用する食材:")
+                                .font(.subheadline)
+                            ForEach(recipe.ingredientLines.prefix(DISPLAY_LIMIT), id: \.self) { ingredient in
+                                Text(ingredient)
+                                    .font(.subheadline)
+                            }
+                            if recipe.ingredientLines.count > DISPLAY_LIMIT {
+                                Text("...")
+                                    .font(.body)
+                            }
                         }
-                    }
-                    Spacer()
-                    if let imageUrl = URL(string: recipe.image) {
-                        AsyncImage(url: imageUrl) { img in
-                            img
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 150, height: 150)
-                        } placeholder: {
-                            ProgressView()
+                        Spacer()
+                        if let imageUrl = URL(string: recipe.image) {
+                            AsyncImage(url: imageUrl) { img in
+                                img
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 150, height: 150)
+                            } placeholder: {
+                                ProgressView()
+                            }
                         }
                     }
                 }
             }
+            .background(Color.orange) // Listの背景色を設定
+            .listStyle(PlainListStyle()) // Listのスタイルを設定
+            
+            .navigationBarTitle("検索結果", displayMode: .inline)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(Color.black, for: .navigationBar)
+            
+            .sheet(isPresented: $isShowSafari, content: {
+                SafariView(url: recipeViewModel.recipeLink!)
+                    .ignoresSafeArea(edges: [.bottom])
+            })
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.orange)
