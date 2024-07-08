@@ -2,6 +2,9 @@ import SwiftUI
 
 struct ClassificationResultView: View {
     @ObservedObject var model: ImageModel
+    @StateObject var recipeViewModel = RecipeViewModel()
+    // Activateかどうかを示すフラグ
+    @State private var isNavigationActive = false
     
     var body: some View {
         VStack {
@@ -23,7 +26,11 @@ struct ClassificationResultView: View {
             
             // レシピを検索するボタン
             Button(action: {
-                // カメラが使用可能なら撮影画面を表示
+                // レシピを検索する
+                if let classificationLabel = model.classificationLabel {
+                    recipeViewModel.SearchRecipes(searchQuery: classificationLabel)
+                    isNavigationActive = true
+                }
             }) {
                 HStack {
                     // アイコンを追加
@@ -41,6 +48,10 @@ struct ClassificationResultView: View {
                 .shadow(radius: 5)
                 .padding(.horizontal, 40)
             }
+            NavigationLink(
+                destination: SearchResultView(recipeViewModel: recipeViewModel),
+                isActive: $isNavigationActive) {
+                }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.orange)
