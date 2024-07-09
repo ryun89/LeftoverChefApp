@@ -14,7 +14,7 @@ struct SearchResultView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
+            VStack(alignment: .leading, spacing: 10) {
                 // セーフエリアの上部のインセットを取得
                 let topPadding = geometry.safeAreaInsets.top
                 
@@ -29,16 +29,11 @@ struct SearchResultView: View {
                             VStack(alignment: .leading){
                                 Text(recipe.label)
                                     .font(.headline)
-                                Text("調理時間:\(recipe.totalTime)分")
-                                    .font(.body)
-                                Text("使用する食材:")
-                                    .font(.subheadline)
-                                ForEach(recipe.ingredientLines.prefix(DISPLAY_LIMIT), id: \.self) { ingredient in
-                                    Text(ingredient)
-                                        .font(.subheadline)
-                                }
-                                if recipe.ingredientLines.count > DISPLAY_LIMIT {
-                                    Text("...")
+                                if recipe.totalTime <= 0 {
+                                    Text("調理時間:不明")
+                                        .font(.body)
+                                } else {
+                                    Text("調理時間:\(recipe.totalTime)分")
                                         .font(.body)
                                 }
                             }
@@ -47,8 +42,10 @@ struct SearchResultView: View {
                                 AsyncImage(url: imageUrl) { img in
                                     img
                                         .resizable()
-                                        .scaledToFit()
+                                        .scaledToFill()
                                         .frame(width: 150, height: 150)
+                                        .clipped()
+                                        .cornerRadius(10)
                                 } placeholder: {
                                     ProgressView()
                                 }

@@ -21,7 +21,7 @@ struct ContentView: View {
                     .shadow(radius: 10) // タイトルを目立たせるための影を追加
                 
                 // 説明テキスト
-                Text("~" + "冷蔵庫の余り物を有効活用!" + "~")
+                Text("~" + "冷蔵庫の余り物を有効活用" + "~")
                     .font(.title2)
                     .fontWeight(.medium)
                     .foregroundColor(.white)

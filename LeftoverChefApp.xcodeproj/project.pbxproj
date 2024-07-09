@@ -166,11 +166,12 @@
 			};
 			buildConfigurationList = EE61E3592C38F093009DD3D5 /* Build configuration list for PBXProject "LeftoverChefApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ja;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = EE61E3552C38F093009DD3D5;
 			productRefGroup = EE61E35F2C38F093009DD3D5 /* Products */;
