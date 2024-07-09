@@ -28,7 +28,7 @@ struct SearchResultView: View {
                         HStack {
                             VStack(alignment: .leading){
                                 Text(recipe.label)
-                                    .font(.headline)
+                                    .font(.title2)
                                 if recipe.totalTime <= 0 {
                                     Text("調理時間:不明")
                                         .font(.body)
@@ -57,7 +57,7 @@ struct SearchResultView: View {
                 .background(Color.orange) // Listの背景色を設定
                 .listStyle(PlainListStyle()) // Listのスタイルを設定
                 
-                .navigationBarTitle("検索結果", displayMode: .inline)
+                .navigationBarTitle("レシピ検索結果", displayMode: .inline)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbarBackground(Color.orange, for: .navigationBar)
                 

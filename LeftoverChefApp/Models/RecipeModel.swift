@@ -29,7 +29,7 @@ class RecipeAPI {
     let app_key = "e1811877cb09b986d22bb6c29a81da70"
     
     func fetchRecipes(query: String, completion: @escaping ([Recipe]) -> Void) {
-        guard let url = URL(string: "\(baseURL)?q=\(query)&app_id=\(app_id)&app_key=\(app_key)&from=0&to=10") else {
+        guard let url = URL(string: "\(baseURL)?q=\(query)&app_id=\(app_id)&app_key=\(app_key)&from=0&to=15　") else {
             return
         }
         // URL出力
