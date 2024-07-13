@@ -29,12 +29,29 @@ struct SearchResultView: View {
                             VStack(alignment: .leading){
                                 Text(recipe.label)
                                     .font(.title2)
-                                if recipe.totalTime <= 0 {
-                                    Text("調理時間:不明")
+                                    .fontWeight(.bold) // フォントをボールド体に設定
+                                HStack {
+                                    Image(systemName: "clock.fill") // アイコン追加
+                                    if recipe.totalTime <= 0 {
+                                        Text("調理時間:不明")
+                                            .font(.body)
+                                    } else {
+                                        Text("調理時間:\(recipe.totalTime)分")
+                                            .font(.body)
+                                    }
+                                }
+                                HStack {
+                                    Image(systemName: "flame.fill") // アイコン追加
+                                    Text("カロリー: \(Int(recipe.calories)) kcal")
                                         .font(.body)
-                                } else {
-                                    Text("調理時間:\(recipe.totalTime)分")
-                                        .font(.body)
+                                }
+                                Text("ヘルスラベル:")
+                                    .font(.subheadline)
+                                ForEach(recipe.healthLabels.prefix(3), id: \.self) { label in
+                                    Text(NSLocalizedString(label, comment: label))
+                                        .font(.subheadline)
+                                        .background(Color.gray.opacity(0.2)) // ヘルスラベルの色分け
+                                        .cornerRadius(4)
                                 }
                             }
                             Spacer()

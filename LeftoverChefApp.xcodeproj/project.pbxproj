@@ -10,6 +10,8 @@
 		EE0A30762C3ADF9A00F8F3E1 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0A30752C3ADF9A00F8F3E1 /* SearchResultView.swift */; };
 		EE0A30782C3AE8B700F8F3E1 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0A30772C3AE8B700F8F3E1 /* RecipeModel.swift */; };
 		EE0A307A2C3AF6C100F8F3E1 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0A30792C3AF6C100F8F3E1 /* RecipeViewModel.swift */; };
+		EE21A1872C426EAF003CCBD7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE21A1852C426EAE003CCBD7 /* Localizable.strings */; };
+		EE21A1892C4273FF003CCBD7 /* VegetableImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EE21A1882C4273FF003CCBD7 /* VegetableImageClassifier.mlmodel */; };
 		EE2384832C3BFC4A00014F95 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2384822C3BFC4A00014F95 /* SafariView.swift */; };
 		EE61E3622C38F093009DD3D5 /* LeftoverChefAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3612C38F093009DD3D5 /* LeftoverChefAppApp.swift */; };
 		EE61E3642C38F093009DD3D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3632C38F093009DD3D5 /* ContentView.swift */; };
@@ -18,7 +20,6 @@
 		EE61E3732C38F283009DD3D5 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3722C38F283009DD3D5 /* ImagePickerView.swift */; };
 		EE61E3772C391084009DD3D5 /* ImagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3762C391084009DD3D5 /* ImagePickerViewModel.swift */; };
 		EE61E3792C39109C009DD3D5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3782C39109C009DD3D5 /* ImageModel.swift */; };
-		EE61E37E2C392A2C009DD3D5 /* VegetableImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EE61E37D2C392A2C009DD3D5 /* VegetableImageClassifier.mlmodel */; };
 		EE61E3802C392CF0009DD3D5 /* VegetableImageClassifierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */; };
 		EE61E3822C3A4FC7009DD3D5 /* ClassificationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,8 @@
 		EE0A30752C3ADF9A00F8F3E1 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		EE0A30772C3AE8B700F8F3E1 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		EE0A30792C3AF6C100F8F3E1 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		EE21A1862C426EAF003CCBD7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EE21A1882C4273FF003CCBD7 /* VegetableImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VegetableImageClassifier.mlmodel; sourceTree = "<group>"; };
 		EE2384822C3BFC4A00014F95 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		EE61E35E2C38F093009DD3D5 /* LeftoverChefApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeftoverChefApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE61E3612C38F093009DD3D5 /* LeftoverChefAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftoverChefAppApp.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		EE61E3722C38F283009DD3D5 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		EE61E3762C391084009DD3D5 /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
 		EE61E3782C39109C009DD3D5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
-		EE61E37D2C392A2C009DD3D5 /* VegetableImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VegetableImageClassifier.mlmodel; sourceTree = "<group>"; };
 		EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableImageClassifierModel.swift; sourceTree = "<group>"; };
 		EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,7 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				EE61E3652C38F094009DD3D5 /* Assets.xcassets */,
-				EE61E37D2C392A2C009DD3D5 /* VegetableImageClassifier.mlmodel */,
+				EE21A1882C4273FF003CCBD7 /* VegetableImageClassifier.mlmodel */,
+				EE21A1852C426EAE003CCBD7 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE61E3692C38F094009DD3D5 /* Preview Assets.xcassets in Resources */,
+				EE21A1872C426EAF003CCBD7 /* Localizable.strings in Resources */,
 				EE61E3662C38F094009DD3D5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,7 +206,7 @@
 			files = (
 				EE61E3642C38F093009DD3D5 /* ContentView.swift in Sources */,
 				EE61E3792C39109C009DD3D5 /* ImageModel.swift in Sources */,
-				EE61E37E2C392A2C009DD3D5 /* VegetableImageClassifier.mlmodel in Sources */,
+				EE21A1892C4273FF003CCBD7 /* VegetableImageClassifier.mlmodel in Sources */,
 				EE61E3802C392CF0009DD3D5 /* VegetableImageClassifierModel.swift in Sources */,
 				EE2384832C3BFC4A00014F95 /* SafariView.swift in Sources */,
 				EE61E3732C38F283009DD3D5 /* ImagePickerView.swift in Sources */,
@@ -216,6 +220,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE21A1852C426EAE003CCBD7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE21A1862C426EAF003CCBD7 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EE61E36A2C38F094009DD3D5 /* Debug */ = {
