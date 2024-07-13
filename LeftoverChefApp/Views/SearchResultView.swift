@@ -14,7 +14,7 @@ struct SearchResultView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
+            VStack(alignment: .leading, spacing: 10) {
                 // セーフエリアの上部のインセットを取得
                 let topPadding = geometry.safeAreaInsets.top
                 
@@ -28,18 +28,30 @@ struct SearchResultView: View {
                         HStack {
                             VStack(alignment: .leading){
                                 Text(recipe.label)
-                                    .font(.headline)
-                                Text("調理時間:\(recipe.totalTime)分")
-                                    .font(.body)
-                                Text("使用する食材:")
-                                    .font(.subheadline)
-                                ForEach(recipe.ingredientLines.prefix(DISPLAY_LIMIT), id: \.self) { ingredient in
-                                    Text(ingredient)
-                                        .font(.subheadline)
+                                    .font(.title2)
+                                    .fontWeight(.bold) // フォントをボールド体に設定
+                                HStack {
+                                    Image(systemName: "clock.fill") // アイコン追加
+                                    if recipe.totalTime <= 0 {
+                                        Text("調理時間:不明")
+                                            .font(.body)
+                                    } else {
+                                        Text("調理時間:\(recipe.totalTime)分")
+                                            .font(.body)
+                                    }
                                 }
-                                if recipe.ingredientLines.count > DISPLAY_LIMIT {
-                                    Text("...")
+                                HStack {
+                                    Image(systemName: "flame.fill") // アイコン追加
+                                    Text("カロリー: \(Int(recipe.calories)) kcal")
                                         .font(.body)
+                                }
+                                Text("ヘルスラベル:")
+                                    .font(.subheadline)
+                                ForEach(recipe.healthLabels.prefix(3), id: \.self) { label in
+                                    Text(NSLocalizedString(label, comment: label))
+                                        .font(.subheadline)
+                                        .background(Color.gray.opacity(0.2)) // ヘルスラベルの色分け
+                                        .cornerRadius(4)
                                 }
                             }
                             Spacer()
@@ -47,8 +59,10 @@ struct SearchResultView: View {
                                 AsyncImage(url: imageUrl) { img in
                                     img
                                         .resizable()
-                                        .scaledToFit()
+                                        .scaledToFill()
                                         .frame(width: 150, height: 150)
+                                        .clipped()
+                                        .cornerRadius(10)
                                 } placeholder: {
                                     ProgressView()
                                 }
@@ -60,7 +74,7 @@ struct SearchResultView: View {
                 .background(Color.orange) // Listの背景色を設定
                 .listStyle(PlainListStyle()) // Listのスタイルを設定
                 
-                .navigationBarTitle("検索結果", displayMode: .inline)
+                .navigationBarTitle("レシピ検索結果", displayMode: .inline)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbarBackground(Color.orange, for: .navigationBar)
                 

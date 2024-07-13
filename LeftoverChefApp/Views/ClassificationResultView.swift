@@ -17,7 +17,7 @@ struct ClassificationResultView: View {
                     .shadow(radius: 5)
                     .padding()
                 
-                Text("分類結果: \(label)")
+                Text("分類結果:" + NSLocalizedString(label, comment: label))
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)

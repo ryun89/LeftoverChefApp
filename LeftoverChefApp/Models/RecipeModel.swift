@@ -5,12 +5,13 @@ struct Recipe: Codable, Equatable {
     let label: String
     let url: String
     let image: String
-    let ingredientLines: [String]
+    let calories: Double
     let totalTime: Int
+    let healthLabels: [String]
     
     // Equatable準拠のために==演算子をオーバーロード
     static func == (lhs: Recipe, rhs: Recipe) -> Bool {
-        return lhs.label == rhs.label && lhs.url == rhs.url && lhs.image == rhs.image && lhs.ingredientLines == rhs.ingredientLines && lhs.totalTime == rhs.totalTime
+        return lhs.label == rhs.label && lhs.url == rhs.url && lhs.image == rhs.image && lhs.calories == rhs.calories && lhs.totalTime == rhs.totalTime && lhs.healthLabels == rhs.healthLabels
     }
 }
 
@@ -29,7 +30,7 @@ class RecipeAPI {
     let app_key = "e1811877cb09b986d22bb6c29a81da70"
     
     func fetchRecipes(query: String, completion: @escaping ([Recipe]) -> Void) {
-        guard let url = URL(string: "\(baseURL)?q=\(query)&app_id=\(app_id)&app_key=\(app_key)&from=0&to=10") else {
+        guard let url = URL(string: "\(baseURL)?q=\(query)&app_id=\(app_id)&app_key=\(app_key)&from=0&to=50") else {
             return
         }
         // URL出力
