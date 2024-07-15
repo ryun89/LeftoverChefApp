@@ -22,6 +22,8 @@
 		EE61E3792C39109C009DD3D5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3782C39109C009DD3D5 /* ImageModel.swift */; };
 		EE61E3802C392CF0009DD3D5 /* VegetableImageClassifierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */; };
 		EE61E3822C3A4FC7009DD3D5 /* ClassificationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */; };
+		EED6426C2C44DAAD004E4C17 /* FavoriteRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426B2C44DAAD004E4C17 /* FavoriteRecipeModel.swift */; };
+		EED6426E2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426D2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		EE61E3782C39109C009DD3D5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableImageClassifierModel.swift; sourceTree = "<group>"; };
 		EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationResultView.swift; sourceTree = "<group>"; };
+		EED6426B2C44DAAD004E4C17 /* FavoriteRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeModel.swift; sourceTree = "<group>"; };
+		EED6426D2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				EE61E3782C39109C009DD3D5 /* ImageModel.swift */,
+				EED6426B2C44DAAD004E4C17 /* FavoriteRecipeModel.swift */,
 				EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */,
 				EE0A30772C3AE8B700F8F3E1 /* RecipeModel.swift */,
 			);
@@ -118,6 +123,7 @@
 			children = (
 				EE61E3762C391084009DD3D5 /* ImagePickerViewModel.swift */,
 				EE0A30792C3AF6C100F8F3E1 /* RecipeViewModel.swift */,
+				EED6426D2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			files = (
 				EE61E3642C38F093009DD3D5 /* ContentView.swift in Sources */,
 				EE61E3792C39109C009DD3D5 /* ImageModel.swift in Sources */,
+				EED6426C2C44DAAD004E4C17 /* FavoriteRecipeModel.swift in Sources */,
 				EE21A1892C4273FF003CCBD7 /* VegetableImageClassifier.mlmodel in Sources */,
 				EE61E3802C392CF0009DD3D5 /* VegetableImageClassifierModel.swift in Sources */,
 				EE2384832C3BFC4A00014F95 /* SafariView.swift in Sources */,
@@ -215,6 +222,7 @@
 				EE0A307A2C3AF6C100F8F3E1 /* RecipeViewModel.swift in Sources */,
 				EE0A30782C3AE8B700F8F3E1 /* RecipeModel.swift in Sources */,
 				EE0A30762C3ADF9A00F8F3E1 /* SearchResultView.swift in Sources */,
+				EED6426E2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift in Sources */,
 				EE61E3822C3A4FC7009DD3D5 /* ClassificationResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
