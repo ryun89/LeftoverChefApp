@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftData
 import Combine
+import Kingfisher
 
 final class ItemDataSource {
     private let modelContainer: ModelContainer
@@ -27,6 +28,21 @@ final class ItemDataSource {
         } catch {
             fatalError(error.localizedDescription)
         }
+        
+        // 画像をキャッシュに保存する
+        if let url = URL(string: targetRecipe.image) {
+            cacheImage(for: url)
+        }
+    }
+    
+    // 画像をキャッシュに保存する
+    func cacheImage(for url: URL) {
+        let resource = KF.ImageResource(downloadURL: url)
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data, let image = UIImage(data: data) {
+                KingfisherManager.shared.cache.store(image, forKey: resource.cacheKey)
+            }
+        }.resume()
     }
     
     // お気に入りのレシピ一覧をフェッチする

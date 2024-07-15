@@ -6,7 +6,7 @@ class FavoriteRecipeViewModel: ObservableObject {
     @ObservationIgnored
     private let dataSource: ItemDataSource
     
-    var favoriteRecipes: [FavoriteRecipeModel] = []
+    @Published var favoriteRecipes: [FavoriteRecipeModel] = []
     
     // クリックされたWebページのリンク
     var recipeLink: URL?
@@ -25,6 +25,7 @@ class FavoriteRecipeViewModel: ObservableObject {
     // データベースからお気に入りレシピを削除する関数
     func deleteFavoriteRecipe(at offsets: IndexSet, context: ModelContext) {
         for index in offsets {
+            print("favoriteRecipes_index: \(index)")
             let recipe = favoriteRecipes[index]
             context.delete(recipe)
             favoriteRecipes.remove(at: index)

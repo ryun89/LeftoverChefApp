@@ -1,9 +1,11 @@
 import SwiftUI
 import SwiftData
+import Kingfisher
 
 struct FavoriteRecipeView: View {
     @Environment(\.modelContext) private var modelContext
     @ObservedObject var favoriteRecipeViewModel: FavoriteRecipeViewModel
+    @Query var favoriteRecipes: [FavoriteRecipeModel]
     
     // SafariViewを表示するかどうかのフラグ
     @State var isShowSafari = false
@@ -16,7 +18,7 @@ struct FavoriteRecipeView: View {
                 
                 // お気に入りレシピ一覧をリストで表示する
                 List {
-                    ForEach(favoriteRecipeViewModel.favoriteRecipes, id: \.id) { recipe in
+                    ForEach(favoriteRecipes, id: \.id) { recipe in
                         Button {
                             favoriteRecipeViewModel.recipeLink = URL(string: recipe.recipeURL)
                             isShowSafari.toggle()
