@@ -14,7 +14,7 @@ struct LeftoverChefAppApp: App {
         WindowGroup {
             let imageModel = ImageModel()
             ContentView(viewModel: ImagePickerViewModel(model: imageModel))
-                .modelContainer(for: FavoriteRecipeModel.self)
         }
+        .modelContainer(for: [FavoriteRecipeModel.self])
     }
 }

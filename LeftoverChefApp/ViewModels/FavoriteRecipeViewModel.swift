@@ -3,25 +3,36 @@ import SwiftData
 import Combine
 
 class FavoriteRecipeViewModel: ObservableObject {
-    @Query var savedFavoriteRecipes: [FavoriteRecipeModel]
-    @Environment(\.modelContext)  var context
+    @ObservationIgnored
+    private let dataSource: ItemDataSource
+    
+    var favoriteRecipes: [FavoriteRecipeModel] = []
     
     // クリックされたWebページのリンク
     var recipeLink: URL?
     
-    // お気に入りレシピを登録する
-    func addFavoriteRecipe(targetRecipe: Recipe) {
-        let newFavoriteRecipe = FavoriteRecipeModel(id: UUID(), recipeName: targetRecipe.label, 
-                                                    recipeURL: targetRecipe.url, imageURL: targetRecipe.image, calories: targetRecipe.calories, 
-                                                    totalTime: targetRecipe.totalTime, healthLabels: targetRecipe.healthLabels)
-        context.insert(newFavoriteRecipe)
+    init(dataSource: ItemDataSource = ItemDataSource.shared) {
+        self.dataSource = dataSource
+        favoriteRecipes = dataSource.fetchFavoriteRecipes()
     }
     
-    // お気に入りレシピを削除する
-    func removeFavoriterecipes(targetRecipe: Recipe) {
-        let targetFavoriteRecipe = FavoriteRecipeModel(id: UUID(), recipeName: targetRecipe.label,
-                                                       recipeURL: targetRecipe.url, imageURL: targetRecipe.image, calories: targetRecipe.calories, 
-                                                       totalTime: targetRecipe.totalTime, healthLabels: targetRecipe.healthLabels)
-        context.delete(targetFavoriteRecipe)
+    // お気に入りレシピを登録する
+    func addFavoriteRecipe(targetRecipe: Recipe) {
+        dataSource.addFavoriteRecipe(targetRecipe: targetRecipe)
+        print("お気に入り登録完了")
+    }
+    
+    // データベースからお気に入りレシピを削除する関数
+    func deleteFavoriteRecipe(at offsets: IndexSet, context: ModelContext) {
+        for index in offsets {
+            let recipe = favoriteRecipes[index]
+            context.delete(recipe)
+            favoriteRecipes.remove(at: index)
+        }
+        do {
+            try context.save()
+        } catch {
+            print("Failed to save context after deletion: \(error)")
+        }
     }
 }

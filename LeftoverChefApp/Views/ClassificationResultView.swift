@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct ClassificationResultView: View {
+    @Environment(\.modelContext) private var modelContext
     @ObservedObject var model: ImageModel
     @StateObject var recipeViewModel = RecipeViewModel()
+    @ObservedObject var favoriteRecipeViewModel: FavoriteRecipeViewModel
     // Activateかどうかを示すフラグ
     @State private var isNavigationActive = false
     
@@ -49,7 +51,7 @@ struct ClassificationResultView: View {
                 .padding(.horizontal, 40)
             }
             NavigationLink(
-                destination: SearchResultView(recipeViewModel: recipeViewModel),
+                destination: SearchResultView(recipeViewModel: recipeViewModel, favoriteRecipeViewModel: favoriteRecipeViewModel),
                 isActive: $isNavigationActive) {
                 }
         }

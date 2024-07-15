@@ -81,7 +81,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: ClassificationResultView(model: imageModel),
+                NavigationLink(destination: ClassificationResultView(model: imageModel, favoriteRecipeViewModel: favoriteRecipeViewModel),
                                    isActive: $isActive) {
                     }
                 }
