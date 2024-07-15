@@ -17,12 +17,16 @@ class FavoriteRecipeViewModel: ObservableObject {
     }
     
     // お気に入りレシピを登録する
-    func addFavoriteRecipe(newFavoriteRecipe: FavoriteRecipeModel) {
+    func addFavoriteRecipe(targetRecipe: Recipe) {
+    let newFavoriteRecipe = FavoriteRecipeModel(id: UUID(), recipeName: targetRecipe.label, 
+                                                recipeURL: targetRecipe.url, imageURL: targetRecipe.image)
         context.insert(newFavoriteRecipe)
     }
     
     // お気に入りレシピを削除する
-    func removeFavoriterecipes(targetFavoriteRecipe: FavoriteRecipeModel) {
+    func removeFavoriterecipes(targetRecipe: Recipe) {
+        let targetFavoriteRecipe = FavoriteRecipeModel(id: UUID(), recipeName: targetRecipe.label,
+                                                       recipeURL: targetRecipe.url, imageURL: targetRecipe.image)
         context.delete(targetFavoriteRecipe)
     }
 }
