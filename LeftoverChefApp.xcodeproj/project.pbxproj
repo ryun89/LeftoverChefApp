@@ -22,6 +22,11 @@
 		EE61E3792C39109C009DD3D5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3782C39109C009DD3D5 /* ImageModel.swift */; };
 		EE61E3802C392CF0009DD3D5 /* VegetableImageClassifierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */; };
 		EE61E3822C3A4FC7009DD3D5 /* ClassificationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */; };
+		EED6426C2C44DAAD004E4C17 /* FavoriteRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426B2C44DAAD004E4C17 /* FavoriteRecipeModel.swift */; };
+		EED6426E2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426D2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift */; };
+		EED642702C44EA66004E4C17 /* FavoriteRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426F2C44EA66004E4C17 /* FavoriteRecipeView.swift */; };
+		EEFAF3622C45001D00857A10 /* ItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF3612C45001D00857A10 /* ItemDataSource.swift */; };
+		EEFAF3652C45199800857A10 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EEFAF3642C45199800857A10 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,10 @@
 		EE61E3782C39109C009DD3D5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableImageClassifierModel.swift; sourceTree = "<group>"; };
 		EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationResultView.swift; sourceTree = "<group>"; };
+		EED6426B2C44DAAD004E4C17 /* FavoriteRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeModel.swift; sourceTree = "<group>"; };
+		EED6426D2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeViewModel.swift; sourceTree = "<group>"; };
+		EED6426F2C44EA66004E4C17 /* FavoriteRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeView.swift; sourceTree = "<group>"; };
+		EEFAF3612C45001D00857A10 /* ItemDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEFAF3652C45199800857A10 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				EE61E3782C39109C009DD3D5 /* ImageModel.swift */,
+				EEFAF3612C45001D00857A10 /* ItemDataSource.swift */,
+				EED6426B2C44DAAD004E4C17 /* FavoriteRecipeModel.swift */,
 				EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */,
 				EE0A30772C3AE8B700F8F3E1 /* RecipeModel.swift */,
 			);
@@ -108,6 +120,7 @@
 				EE61E3722C38F283009DD3D5 /* ImagePickerView.swift */,
 				EE0A30752C3ADF9A00F8F3E1 /* SearchResultView.swift */,
 				EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */,
+				EED6426F2C44EA66004E4C17 /* FavoriteRecipeView.swift */,
 				EE2384822C3BFC4A00014F95 /* SafariView.swift */,
 			);
 			path = Views;
@@ -118,6 +131,7 @@
 			children = (
 				EE61E3762C391084009DD3D5 /* ImagePickerViewModel.swift */,
 				EE0A30792C3AF6C100F8F3E1 /* RecipeViewModel.swift */,
+				EED6426D2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -148,6 +162,9 @@
 			dependencies = (
 			);
 			name = LeftoverChefApp;
+			packageProductDependencies = (
+				EEFAF3642C45199800857A10 /* Kingfisher */,
+			);
 			productName = LeftoverChefApp;
 			productReference = EE61E35E2C38F093009DD3D5 /* LeftoverChefApp.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +194,9 @@
 				ja,
 			);
 			mainGroup = EE61E3552C38F093009DD3D5;
+			packageReferences = (
+				EEFAF3632C45199800857A10 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = EE61E35F2C38F093009DD3D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,15 +226,19 @@
 			files = (
 				EE61E3642C38F093009DD3D5 /* ContentView.swift in Sources */,
 				EE61E3792C39109C009DD3D5 /* ImageModel.swift in Sources */,
+				EED6426C2C44DAAD004E4C17 /* FavoriteRecipeModel.swift in Sources */,
 				EE21A1892C4273FF003CCBD7 /* VegetableImageClassifier.mlmodel in Sources */,
 				EE61E3802C392CF0009DD3D5 /* VegetableImageClassifierModel.swift in Sources */,
 				EE2384832C3BFC4A00014F95 /* SafariView.swift in Sources */,
 				EE61E3732C38F283009DD3D5 /* ImagePickerView.swift in Sources */,
 				EE61E3772C391084009DD3D5 /* ImagePickerViewModel.swift in Sources */,
+				EED642702C44EA66004E4C17 /* FavoriteRecipeView.swift in Sources */,
+				EEFAF3622C45001D00857A10 /* ItemDataSource.swift in Sources */,
 				EE61E3622C38F093009DD3D5 /* LeftoverChefAppApp.swift in Sources */,
 				EE0A307A2C3AF6C100F8F3E1 /* RecipeViewModel.swift in Sources */,
 				EE0A30782C3AE8B700F8F3E1 /* RecipeModel.swift in Sources */,
 				EE0A30762C3ADF9A00F8F3E1 /* SearchResultView.swift in Sources */,
+				EED6426E2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift in Sources */,
 				EE61E3822C3A4FC7009DD3D5 /* ClassificationResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +458,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EEFAF3632C45199800857A10 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EEFAF3642C45199800857A10 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEFAF3632C45199800857A10 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EE61E3562C38F093009DD3D5 /* Project object */;
 }

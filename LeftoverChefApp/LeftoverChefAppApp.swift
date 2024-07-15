@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct LeftoverChefAppApp: App {
+    
     var body: some Scene {
         WindowGroup {
             let imageModel = ImageModel()
             ContentView(viewModel: ImagePickerViewModel(model: imageModel))
         }
+        .modelContainer(for: [FavoriteRecipeModel.self])
     }
 }

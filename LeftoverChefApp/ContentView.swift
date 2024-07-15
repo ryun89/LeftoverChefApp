@@ -1,10 +1,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.modelContext) private var modelContext
     @State var captureImage: UIImage? = nil
     @State private var isShowingSheet = false
     @ObservedObject var viewModel: ImagePickerViewModel
     @StateObject var imageModel = ImageModel()
+    @StateObject var favoriteRecipeViewModel = FavoriteRecipeViewModel()
     // Activateかどうかを示すフラグ
     @State private var isActive = false
     
@@ -60,10 +62,26 @@ struct ContentView: View {
                 }) {
                     ImagePickerView(viewModel: ImagePickerViewModel(model: imageModel))
                 }
+                
+                // お気に入りレシピ画面へのナビゲーションボタン
+                NavigationLink(destination: FavoriteRecipeView(favoriteRecipeViewModel: favoriteRecipeViewModel)) {
+                    HStack {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                        Text("お気に入りのレシピ")
+                            .font(.headline)
+                            .foregroundColor(.orange)
+                    }
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .shadow(radius: 2)
+                }
+                .padding()
                     
                     Spacer()
                     
-                    NavigationLink(destination: ClassificationResultView(model: imageModel),
+                NavigationLink(destination: ClassificationResultView(model: imageModel, favoriteRecipeViewModel: favoriteRecipeViewModel),
                                    isActive: $isActive) {
                     }
                 }

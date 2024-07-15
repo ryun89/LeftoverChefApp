@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SearchResultView: View {
     @ObservedObject var recipeViewModel: RecipeViewModel
+    @ObservedObject var favoriteRecipeViewModel: FavoriteRecipeViewModel
     
     // 選択されたレシピのリンク
     @State private var selectedRecipeLink: URL?
@@ -30,6 +31,12 @@ struct SearchResultView: View {
                                 Text(recipe.label)
                                     .font(.title2)
                                     .fontWeight(.bold) // フォントをボールド体に設定
+                                Button(action: {
+                                    favoriteRecipeViewModel.addFavoriteRecipe(targetRecipe: recipe)
+                                }) {
+                                    Image(systemName: "star")
+                                        .foregroundColor(.yellow)
+                                }
                                 HStack {
                                     Image(systemName: "clock.fill") // アイコン追加
                                     if recipe.totalTime <= 0 {
