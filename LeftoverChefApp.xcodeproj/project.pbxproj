@@ -24,6 +24,7 @@
 		EE61E3822C3A4FC7009DD3D5 /* ClassificationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */; };
 		EED6426C2C44DAAD004E4C17 /* FavoriteRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426B2C44DAAD004E4C17 /* FavoriteRecipeModel.swift */; };
 		EED6426E2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426D2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift */; };
+		EED642702C44EA66004E4C17 /* FavoriteRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426F2C44EA66004E4C17 /* FavoriteRecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationResultView.swift; sourceTree = "<group>"; };
 		EED6426B2C44DAAD004E4C17 /* FavoriteRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeModel.swift; sourceTree = "<group>"; };
 		EED6426D2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeViewModel.swift; sourceTree = "<group>"; };
+		EED6426F2C44EA66004E4C17 /* FavoriteRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				EE61E3722C38F283009DD3D5 /* ImagePickerView.swift */,
 				EE0A30752C3ADF9A00F8F3E1 /* SearchResultView.swift */,
 				EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */,
+				EED6426F2C44EA66004E4C17 /* FavoriteRecipeView.swift */,
 				EE2384822C3BFC4A00014F95 /* SafariView.swift */,
 			);
 			path = Views;
@@ -218,6 +221,7 @@
 				EE2384832C3BFC4A00014F95 /* SafariView.swift in Sources */,
 				EE61E3732C38F283009DD3D5 /* ImagePickerView.swift in Sources */,
 				EE61E3772C391084009DD3D5 /* ImagePickerViewModel.swift in Sources */,
+				EED642702C44EA66004E4C17 /* FavoriteRecipeView.swift in Sources */,
 				EE61E3622C38F093009DD3D5 /* LeftoverChefAppApp.swift in Sources */,
 				EE0A307A2C3AF6C100F8F3E1 /* RecipeViewModel.swift in Sources */,
 				EE0A30782C3AE8B700F8F3E1 /* RecipeModel.swift in Sources */,
