@@ -18,7 +18,7 @@ struct FavoriteRecipeView: View {
                 
                 // お気に入りレシピ一覧をリストで表示する
                 List {
-                    ForEach(favoriteRecipes, id: \.id) { recipe in
+                    ForEach(favoriteRecipeViewModel.favoriteRecipes, id: \.id) { recipe in
                         Button {
                             favoriteRecipeViewModel.recipeLink = URL(string: recipe.recipeURL)
                             isShowSafari.toggle()

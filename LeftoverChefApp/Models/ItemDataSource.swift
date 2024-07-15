@@ -17,7 +17,7 @@ final class ItemDataSource {
     }
     
     // お気に入りレシピを登録する
-    func addFavoriteRecipe(targetRecipe: Recipe) {
+    func createFavoriteRecipe(targetRecipe: Recipe) -> FavoriteRecipeModel {
         let newFavoriteRecipe = FavoriteRecipeModel(id: UUID(), recipeName: targetRecipe.label,
                                                     recipeURL: targetRecipe.url, imageURL: targetRecipe.image, calories: targetRecipe.calories,
                                                     totalTime: targetRecipe.totalTime, healthLabels: targetRecipe.healthLabels)
@@ -33,6 +33,8 @@ final class ItemDataSource {
         if let url = URL(string: targetRecipe.image) {
             cacheImage(for: url)
         }
+        
+        return newFavoriteRecipe
     }
     
     // 画像をキャッシュに保存する
@@ -43,6 +45,12 @@ final class ItemDataSource {
                 KingfisherManager.shared.cache.store(image, forKey: resource.cacheKey)
             }
         }.resume()
+    }
+    
+    
+    // お気に入りレシピを削除する
+    func deleteFavoriteRecipe(targetFavoriteRecipe: FavoriteRecipeModel) {
+        modelContext.delete(targetFavoriteRecipe)
     }
     
     // お気に入りのレシピ一覧をフェッチする

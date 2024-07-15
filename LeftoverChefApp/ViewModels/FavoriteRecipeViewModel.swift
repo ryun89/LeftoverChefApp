@@ -18,7 +18,8 @@ class FavoriteRecipeViewModel: ObservableObject {
     
     // お気に入りレシピを登録する
     func addFavoriteRecipe(targetRecipe: Recipe) {
-        dataSource.addFavoriteRecipe(targetRecipe: targetRecipe)
+        let newFavoriteRecipe = dataSource.createFavoriteRecipe(targetRecipe: targetRecipe)
+        favoriteRecipes.append(newFavoriteRecipe)
         print("お気に入り登録完了")
     }
     
@@ -27,7 +28,7 @@ class FavoriteRecipeViewModel: ObservableObject {
         for index in offsets {
             print("favoriteRecipes_index: \(index)")
             let recipe = favoriteRecipes[index]
-            context.delete(recipe)
+            dataSource.deleteFavoriteRecipe(targetFavoriteRecipe: recipe)
             favoriteRecipes.remove(at: index)
         }
         do {
