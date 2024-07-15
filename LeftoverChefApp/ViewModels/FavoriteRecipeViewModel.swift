@@ -18,7 +18,7 @@ class FavoriteRecipeViewModel: ObservableObject {
     
     // お気に入りレシピを登録する
     func addFavoriteRecipe(targetRecipe: Recipe) {
-    let newFavoriteRecipe = FavoriteRecipeModel(id: UUID(), recipeName: targetRecipe.label, 
+        let newFavoriteRecipe = FavoriteRecipeModel(id: UUID(), recipeName: targetRecipe.label, 
                                                 recipeURL: targetRecipe.url, imageURL: targetRecipe.image)
         context.insert(newFavoriteRecipe)
     }
