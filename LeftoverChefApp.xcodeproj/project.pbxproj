@@ -22,12 +22,27 @@
 		EE61E3792C39109C009DD3D5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3782C39109C009DD3D5 /* ImageModel.swift */; };
 		EE61E3802C392CF0009DD3D5 /* VegetableImageClassifierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */; };
 		EE61E3822C3A4FC7009DD3D5 /* ClassificationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */; };
+		EE8E70502C560F61002BA1A1 /* LeftoverChefAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8E704F2C560F61002BA1A1 /* LeftoverChefAppTests.swift */; };
+		EE8E70582C56117F002BA1A1 /* ImageModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8E70572C56117F002BA1A1 /* ImageModelTest.swift */; };
+		EE8E705A2C5613C4002BA1A1 /* VegetableImageClassifierModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8E70592C5613C4002BA1A1 /* VegetableImageClassifierModelTest.swift */; };
+		EE8E705E2C5618F6002BA1A1 /* ImagePickerViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8E705D2C5618F6002BA1A1 /* ImagePickerViewModelTest.swift */; };
+		EE8E70622C5620B6002BA1A1 /* RecipeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8E70612C5620B6002BA1A1 /* RecipeViewModelTest.swift */; };
 		EED6426C2C44DAAD004E4C17 /* FavoriteRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426B2C44DAAD004E4C17 /* FavoriteRecipeModel.swift */; };
 		EED6426E2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426D2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift */; };
 		EED642702C44EA66004E4C17 /* FavoriteRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6426F2C44EA66004E4C17 /* FavoriteRecipeView.swift */; };
 		EEFAF3622C45001D00857A10 /* ItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF3612C45001D00857A10 /* ItemDataSource.swift */; };
 		EEFAF3652C45199800857A10 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EEFAF3642C45199800857A10 /* Kingfisher */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE8E70512C560F61002BA1A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE61E3562C38F093009DD3D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE61E35D2C38F093009DD3D5;
+			remoteInfo = LeftoverChefApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EE0A30752C3ADF9A00F8F3E1 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
@@ -46,6 +61,12 @@
 		EE61E3782C39109C009DD3D5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		EE61E37F2C392CF0009DD3D5 /* VegetableImageClassifierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableImageClassifierModel.swift; sourceTree = "<group>"; };
 		EE61E3812C3A4FC7009DD3D5 /* ClassificationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationResultView.swift; sourceTree = "<group>"; };
+		EE8E704D2C560F61002BA1A1 /* LeftoverChefAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeftoverChefAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8E704F2C560F61002BA1A1 /* LeftoverChefAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftoverChefAppTests.swift; sourceTree = "<group>"; };
+		EE8E70572C56117F002BA1A1 /* ImageModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModelTest.swift; sourceTree = "<group>"; };
+		EE8E70592C5613C4002BA1A1 /* VegetableImageClassifierModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableImageClassifierModelTest.swift; sourceTree = "<group>"; };
+		EE8E705D2C5618F6002BA1A1 /* ImagePickerViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModelTest.swift; sourceTree = "<group>"; };
+		EE8E70612C5620B6002BA1A1 /* RecipeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModelTest.swift; sourceTree = "<group>"; };
 		EED6426B2C44DAAD004E4C17 /* FavoriteRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeModel.swift; sourceTree = "<group>"; };
 		EED6426D2C44DD9A004E4C17 /* FavoriteRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeViewModel.swift; sourceTree = "<group>"; };
 		EED6426F2C44EA66004E4C17 /* FavoriteRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeView.swift; sourceTree = "<group>"; };
@@ -61,6 +82,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE8E704A2C560F61002BA1A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -68,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				EE61E3602C38F093009DD3D5 /* LeftoverChefApp */,
+				EE8E704E2C560F61002BA1A1 /* LeftoverChefAppTests */,
 				EE61E35F2C38F093009DD3D5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				EE61E35E2C38F093009DD3D5 /* LeftoverChefApp.app */,
+				EE8E704D2C560F61002BA1A1 /* LeftoverChefAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +176,42 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		EE8E704E2C560F61002BA1A1 /* LeftoverChefAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE8E704F2C560F61002BA1A1 /* LeftoverChefAppTests.swift */,
+				EE8E70562C561155002BA1A1 /* Models */,
+				EE8E70602C56207B002BA1A1 /* View */,
+				EE8E705F2C562054002BA1A1 /* ViewModels */,
+			);
+			path = LeftoverChefAppTests;
+			sourceTree = "<group>";
+		};
+		EE8E70562C561155002BA1A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE8E70572C56117F002BA1A1 /* ImageModelTest.swift */,
+				EE8E70592C5613C4002BA1A1 /* VegetableImageClassifierModelTest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE8E705F2C562054002BA1A1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EE8E705D2C5618F6002BA1A1 /* ImagePickerViewModelTest.swift */,
+				EE8E70612C5620B6002BA1A1 /* RecipeViewModelTest.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EE8E70602C56207B002BA1A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +235,24 @@
 			productReference = EE61E35E2C38F093009DD3D5 /* LeftoverChefApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EE8E704C2C560F61002BA1A1 /* LeftoverChefAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE8E70552C560F61002BA1A1 /* Build configuration list for PBXNativeTarget "LeftoverChefAppTests" */;
+			buildPhases = (
+				EE8E70492C560F61002BA1A1 /* Sources */,
+				EE8E704A2C560F61002BA1A1 /* Frameworks */,
+				EE8E704B2C560F61002BA1A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE8E70522C560F61002BA1A1 /* PBXTargetDependency */,
+			);
+			name = LeftoverChefAppTests;
+			productName = LeftoverChefAppTests;
+			productReference = EE8E704D2C560F61002BA1A1 /* LeftoverChefAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,6 +265,10 @@
 				TargetAttributes = {
 					EE61E35D2C38F093009DD3D5 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					EE8E704C2C560F61002BA1A1 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = EE61E35D2C38F093009DD3D5;
 					};
 				};
 			};
@@ -202,6 +290,7 @@
 			projectRoot = "";
 			targets = (
 				EE61E35D2C38F093009DD3D5 /* LeftoverChefApp */,
+				EE8E704C2C560F61002BA1A1 /* LeftoverChefAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -214,6 +303,13 @@
 				EE61E3692C38F094009DD3D5 /* Preview Assets.xcassets in Resources */,
 				EE21A1872C426EAF003CCBD7 /* Localizable.strings in Resources */,
 				EE61E3662C38F094009DD3D5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8E704B2C560F61002BA1A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +339,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE8E70492C560F61002BA1A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8E70502C560F61002BA1A1 /* LeftoverChefAppTests.swift in Sources */,
+				EE8E705A2C5613C4002BA1A1 /* VegetableImageClassifierModelTest.swift in Sources */,
+				EE8E705E2C5618F6002BA1A1 /* ImagePickerViewModelTest.swift in Sources */,
+				EE8E70622C5620B6002BA1A1 /* RecipeViewModelTest.swift in Sources */,
+				EE8E70582C56117F002BA1A1 /* ImageModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE8E70522C560F61002BA1A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE61E35D2C38F093009DD3D5 /* LeftoverChefApp */;
+			targetProxy = EE8E70512C560F61002BA1A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EE21A1852C426EAE003CCBD7 /* Localizable.strings */ = {
@@ -436,6 +552,42 @@
 			};
 			name = Release;
 		};
+		EE8E70532C560F61002BA1A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9US465DXCK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yakyu.LeftoverChefAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeftoverChefApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LeftoverChefApp";
+			};
+			name = Debug;
+		};
+		EE8E70542C560F61002BA1A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9US465DXCK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yakyu.LeftoverChefAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeftoverChefApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LeftoverChefApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -453,6 +605,15 @@
 			buildConfigurations = (
 				EE61E36D2C38F094009DD3D5 /* Debug */,
 				EE61E36E2C38F094009DD3D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE8E70552C560F61002BA1A1 /* Build configuration list for PBXNativeTarget "LeftoverChefAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8E70532C560F61002BA1A1 /* Debug */,
+				EE8E70542C560F61002BA1A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
