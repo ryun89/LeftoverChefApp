@@ -26,8 +26,8 @@ struct RecipeResponce: Codable {
 // レシピAPI
 class RecipeAPI {
     let baseURL = "https://api.edamam.com/search"
-    let app_id = "8d94ea6f"
-    let app_key = "e1811877cb09b986d22bb6c29a81da70"
+    let app_id = ""
+    let app_key = ""
     
     func fetchRecipes(query: String, completion: @escaping ([Recipe]) -> Void) {
         guard let url = URL(string: "\(baseURL)?q=\(query)&app_id=\(app_id)&app_key=\(app_key)&from=0&to=50") else {
